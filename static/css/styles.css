@@ -1,0 +1,21 @@
+.container {
+    background-image: linear-gradient(to right top, #f2837e, #e77286, #d6658e, #c05b97, #a5559f, #885cac, #6262b3, #2d67b4, #0072af, #007aa1, #007e8f, #17817c);
+    min-width: 100%;
+}
+
+.form-control {
+    display: block;
+}
+
+.displayed_image {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.image-section {
+    padding-right: 25px;
+}
+
+.colors_table {
+    padding-left: 25px;
+}
