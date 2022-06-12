@@ -11,7 +11,7 @@ load_dotenv()
 SECRET_KEY = os.getenv("secret_key")
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "static/images/"
+UPLOAD_FOLDER = "static/"
 app.config['SECRET_KEY'] = SECRET_KEY
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config["MAX_CONTENT_LENGHT"] = 16 * 1024 * 1024
@@ -46,7 +46,7 @@ def upload_file():
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			flash("Image successfully uploaded and displayed below")
 
-			image_path = f"static/images/{filename}"
+			image_path = f"static/{filename}"
 			ct = ColorThief(image_path)
 			palette = ct.get_palette(color_count=11)
 			colors = {
